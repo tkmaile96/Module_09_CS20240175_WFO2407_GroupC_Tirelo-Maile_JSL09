@@ -10,6 +10,18 @@ body {
     background-size: cover;
     color: #ffffff;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 2rem;
+    font-size: 1.5rem;
     
+}
+main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.time {
+    text-align: center;
+    font-size: 3rem;
+    font: bold;
 }
