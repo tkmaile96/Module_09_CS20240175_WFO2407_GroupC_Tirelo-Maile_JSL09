@@ -25,3 +25,27 @@ main {
     font-size: 3rem;
     font: bold;
 }
+
+#weather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-self: flex-start;
+    margin-top: 0;
+}
+.weather-temperature {
+    margin: 0;
+    margin-left: -10px;
+}
+
+.weather-city {
+    margin: 0;
+    text-align: right;
+    margin-top: -10px;
+}
+.top {
+    display: flex;
+    justify-content: space-between;
+}

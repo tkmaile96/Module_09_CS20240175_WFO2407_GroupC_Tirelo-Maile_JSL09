@@ -48,6 +48,30 @@ function displayClock() {
 }
 setInterval(displayClock, 1000);  // call the function every second to update the time
 
+// Fetch current weather based on Geolocation
+navigator.geolocation.getCurrentPosition(position => {
+    fetch(`https://apis.scrimba.com/openweathermap/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=imperial`)
+    // check if the response from the API is OK, if not throw an error
+    .then(res => {
+        if(!res.ok) {
+            throw Error("Weather data is not available");
+        }
+        // if the response is OK, convert it to JSON format
+        return res.json();
+    })
+    .then(data => {
+        const iconUrl = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+        document.getElementById('weather').innerHTML = 
+        `<img src="${iconUrl}" alt="${data.weather[0].description} icon"/> 
+        <p class="weather-temperature">${Math.round(data.main.temp)}º</p> 
+        <p class="weather-city">${data.name}</p>`;   // display the city name
+
+    })
+    // catch any  errors and display them in the console
+    .catch(error => console.error('Error:', error));
+
+})
+
 
 
 
