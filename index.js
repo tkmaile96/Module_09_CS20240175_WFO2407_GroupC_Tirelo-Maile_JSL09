@@ -9,8 +9,12 @@ fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&que
 .catch(_err => {
     // Should the API request fail, use a default image as the background
     document.body.style.backgroundImage = `url(https://images.unsplash.com/photo-1507525428034-b723cf961d3e?crop=entropy&cs=srgb&fm=jpg&ixid=MnwyMTEwMjl8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MjI2NzA5Mzg&ixlib=rb-1.2.1&q=85)`
-    
-})
+    document.getElementById("author").textContent = `By:  Unsplash` // set the author text to Unsplash
+
+});
+
+// Fetch Dogecoin data from CoinGecko
+fetch("https://api.coingecko.com/api/v3/coins/dogecoin")
 
 
 
