@@ -15,7 +15,14 @@ fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&que
 
 // Fetch Dogecoin data from CoinGecko
 fetch("https://api.coingecko.com/api/v3/coins/dogecoin")
-
+// lets check if the response from the API is OK, if not throw an error
+.then(res => {
+    if (!res.ok) {
+        throw new Error("Network response was not ok");
+    }
+    // if the response is OK, convert it to JSON format
+    return res.json();
+})
 
 
 /**
