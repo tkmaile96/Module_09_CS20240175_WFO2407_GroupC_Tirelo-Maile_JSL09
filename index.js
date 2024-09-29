@@ -26,7 +26,7 @@ fetch("https://api.coingecko.com/api/v3/coins/dogecoin")
 })
 .then(data => {
     document.getElementById('crypto-top').innerHTML =
-    `<img src="${data.image.small}" alt="${data.name} logo" />
+    `<img src=${data.image.small} />
     <span>${data.name}</span>`;  // display the Dogecoin logo and name
 
 

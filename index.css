@@ -15,6 +15,7 @@ body {
 }
 main {
     height: 100vh;
+    padding: 15px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -26,26 +27,45 @@ main {
     font: bold;
 }
 
-#weather {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    align-self: flex-start;
-    margin-top: 0;
-}
-.weather-temperature {
+.weather-temperature p {
     margin: 0;
     margin-left: -10px;
+    font-size: 1.7rem;
 }
 
-.weather-city {
+.weather-city p{
     margin: 0;
-    text-align: right;
+    width: 100%;
+    text-align: left;
     margin-top: -10px;
+    font-size: 1.2rem;
 }
 .top {
     display: flex;
     justify-content: space-between;
 }
+#crypto-top img {
+    display: block;
+    width: 50px;
+    height: 50px;
+}
+
+#crypto-top span {
+    margin-left: 10px;
+}
+
+#crypto p {
+    margin: 0;
+}
+
+#weather {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-self: flex-start;
+    margin-top: -20px;
+}
+ #weather > img {
+    width: 100px;
+ }
