@@ -40,6 +40,15 @@ document.getElementById("crypto").innerHTML =
 // Catch any errors and  display them in the console
 .catch(error => console.error('Error:', error));
 
+// function to display real time clock
+function displayClock() {
+    const  date = new Date();  // get the current date and time
+    document.getElementById('time').textContent = date.toLocaleTimeString('en-us', {timeStyle: 'short'});  // display the time in the time element
+
+}
+setInterval(displayClock, 1000);  // call the function every second to update the time
+
+
 
 
 
