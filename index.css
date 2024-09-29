@@ -1,0 +1,15 @@
+/* -- Basic Styling -- */
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: no-repeat fixed  center;
+    background-size: cover;
+    color: #ffffff;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    
+}
