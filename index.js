@@ -4,7 +4,8 @@
 fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=nature")
 .then(response => response.json()) // converts response into Json format
 .then(data => {
-    document.body.style.backgroundImage = `By: ${data.user.name}`; // set the background image with the name of the author
+    document.body.style.backgroundImage = `url(${data.urls.full})`; // set the background image with the name of the author
+    document.getElementById("author").textContent = `By: ${data.user.name}`;
 })
 .catch(_err => {
     // Should the API request fail, use a default image as the background
