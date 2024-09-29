@@ -23,7 +23,12 @@ fetch("https://api.coingecko.com/api/v3/coins/dogecoin")
     // if the response is OK, convert it to JSON format
     return res.json();
 })
+.then(data => {
+    document.getElementById('crypto-top').innerHTML =
+    `<img src="${data.image.small}" alt="${data.name} logo" />
+    <span>${data.name}</span>`;  // display the Dogecoin logo and name
 
+})
 
 /**
  * {
