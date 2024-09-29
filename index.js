@@ -29,7 +29,17 @@ fetch("https://api.coingecko.com/api/v3/coins/dogecoin")
     `<img src="${data.image.small}" alt="${data.name} logo" />
     <span>${data.name}</span>`;  // display the Dogecoin logo and name
 
+
+//  insert coingecko prices
+document.getElementById("crypto").innerHTML = 
+`<p>🎯 Current price: $${data.market_data.current_price.usd}</p>
+<p>🚨 24h high:  $${data.market_data.high_24h.usd}</p>
+<p>🚨 24h Low: $${data.market_data.low_24h.usd} </p>`;
+
 })
+
+
+
 
 /**
  * {
