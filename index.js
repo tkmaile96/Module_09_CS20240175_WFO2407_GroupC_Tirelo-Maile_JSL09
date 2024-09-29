@@ -37,6 +37,9 @@ document.getElementById("crypto").innerHTML =
 <p>🚨 24h Low: $${data.market_data.low_24h.usd} </p>`;
 
 })
+// Catch any errors and  display them in the console
+.catch(error => console.error('Error:', error));
+
 
 
 
